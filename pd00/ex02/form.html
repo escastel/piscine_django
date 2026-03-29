@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="" method="">
+        <label for="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Firstname" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="99" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required><br>
+
+        <label for="student">Student at 42?</label>
+        <input type="checkbox" id="student" name="student" value="Yes"><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="gender_male" name="gender" value="Male"/> Male
+        <input type="radio" id="gender_female" name="gender" value="Female"/> Female
+        <input type="radio" id="gender_other" name="gender" value="Other"/> Other<br>
+
+        <input type="submit" value="run thax sexy Javascript!" onclick="displayFormContents()">
+    </form>
+    <script src="popup.js"></script>
+</body>
+</html>
