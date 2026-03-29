@@ -1,6 +1,6 @@
 import sys
 
-def rev_capital_city(capital):
+def state(capital):
     states = {
         "Oregon" : "OR",
         "Alabama" : "AL",
@@ -31,7 +31,7 @@ def rev_capital_city(capital):
 def main():
     if len(sys.argv) != 2:
         sys.exit(1)
-    rev_capital_city(sys.argv[1])
+    state(sys.argv[1])
 
 if __name__ == '__main__':
     main()

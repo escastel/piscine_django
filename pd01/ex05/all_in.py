@@ -15,7 +15,7 @@ def get_dicts():
     }
     return states, capital_cities
 
-def capital_city(state):
+def get_capital_city(state):
     states, capital_cities = get_dicts()
 
     capital = ""
@@ -25,7 +25,7 @@ def capital_city(state):
 
     return capital
     
-def rev_capital_city(capital):
+def get_state(capital):
     states, capital_cities = get_dicts()
     
     value_state = ""
@@ -50,10 +50,10 @@ def all_in(str):
             expressions.append(s.strip())
 
     for e in expressions:
-        if capital_city(e.title()):
-            print (capital_city(e.title()), "is the capital of", e.title())
-        elif rev_capital_city(e.title()):
-            print (e.title(), "is the capital of", rev_capital_city(e.title()))
+        if get_capital_city(e.title()):
+            print (get_capital_city(e.title()), "is the capital of", e.title())
+        elif get_state(e.title()):
+            print (e.title(), "is the capital of", get_state(e.title()))
         else:
             print(e, "is neither a capital city nor a state")
 
