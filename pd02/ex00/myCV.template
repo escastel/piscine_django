@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{name} {surname} - CV</title>
+</head>
+<body>
+    <h1>{name} {surname}</h1>
+    <p><strong>Age:</strong> {age}</p>
+    <p><strong>Profession:</strong> {profession}</p>
+</body>
+</html>
