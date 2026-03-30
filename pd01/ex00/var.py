@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def my_var():
     var_int = 42
     print(var_int, "has a type", type(var_int))

@@ -1,4 +1,4 @@
-import sys
+#!/usr/bin/python3
 
 def generate_html(elements):
     periods = organize_by_period(elements)
