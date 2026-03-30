@@ -19,7 +19,7 @@ def create_intern():
     intern = Intern()
     mark = Intern("Mark")
 
-    print("Name of first intern:", intern)
+    print("Name of the first intern:", intern)
     print("Name of the second intern:", mark)
     print(f"{mark}: {mark.make_coffee()}")
 
