@@ -31,7 +31,7 @@ class CoffeeMachine:
             self.broken = True
 
         if random.choice([True, False]):
-            return drink
+            return drink()
         else:
             return self.EmptyCup()
         
@@ -40,11 +40,11 @@ if __name__ == '__main__':
     machine = CoffeeMachine()
     for i in range(23):
         try:
-            drinks = [b.Coffee(), b.Tea(), b.Chocolate(), b.Cappuccino()]
-            drink = random.choice(drinks)
+            drinks = [b.Coffee, b.Tea, b.Chocolate, b.Cappuccino]
+            drink_class = random.choice(drinks)
             
-            print(f"\033[35m{i + 1}. Ordered drink: {drink.name}\033[0m")
-            drink_machine = machine.serve(drink)
+            print(f"\033[35m{i + 1}. Ordered drink: {drink_class.name}\033[0m")
+            drink_machine = machine.serve(drink_class)
             print(f"Picked drink:\n{drink_machine}\n")
 
         except CoffeeMachine.BrokenMachineException as e:
