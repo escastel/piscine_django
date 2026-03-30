@@ -6,8 +6,7 @@ class HotBeverage:
         return "Just some hot water in a cup."
     
     def __str__(self):
-        str = f"name : {self.name}\nprice : {self.price:.2f}\ndescription : {self.description()}"
-        return str     
+        return f"name : {self.name}\nprice : {self.price:.2f}\ndescription : {self.description()}"
 
 class Coffee(HotBeverage):
     price = 0.40
