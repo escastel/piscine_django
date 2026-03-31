@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import antigravity as a
 import sys
 
@@ -27,7 +29,7 @@ def parse_int(dtdw):
         year = int(dtdw[0])
         month = int(dtdw[1])
         day = int(dtdw[2])
-    except Exception:
+    except ValueError:
         print(f"\033[31mError: the third argument has no format YYYY-MM-DD-DOW.\033[0m")
         sys.exit(1)
 
