@@ -4,11 +4,9 @@ import requests
 import sys
 import dewiki
 
-
 def build_filename(query):
     cleaned = "_".join(query.split())
     return cleaned + ".wiki"
-
 
 def request_wikipedia_api(params):
     API_URL = "https://en.wikipedia.org/w/api.php"
@@ -18,7 +16,6 @@ def request_wikipedia_api(params):
     if response.status_code != 200:
         raise RuntimeError("Wikipedia API returned a non-200 status code.")
     return response.json()
-
 
 def find_best_title(query):
     params = {
@@ -33,7 +30,6 @@ def find_best_title(query):
     if not search_data:
         raise RuntimeError("No result found for this request.")
     return search_data[0].get("title")
-
 
 def fetch_wiki_content(title):
     params = {
@@ -63,12 +59,7 @@ def fetch_wiki_content(title):
         raise RuntimeError("Content could not be converted to plain text.")
     return plain_text
 
-
 def main():
-    if dewiki is None:
-        print("Error: missing dependency 'dewiki'. Install with: pip3 install -r requirement.txt")
-        sys.exit(1)
-
     if len(sys.argv) != 2:
         print("Error: invalid number of arguments.")
         sys.exit(1)
@@ -83,6 +74,7 @@ def main():
     try:
         title = find_best_title(query)
         content = fetch_wiki_content(title)
+
         with open(filename, "w", encoding="utf-8") as output_file:
             output_file.write(content)
     except requests.RequestException:
