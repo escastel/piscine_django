@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+django_venv/
+
+# Django local database and logs
+db.sqlite3
+*.log
+
+# Environment files
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
