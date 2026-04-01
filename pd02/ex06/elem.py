@@ -3,6 +3,7 @@
 class Text(str):
 
     def __str__(self):
+
         result = super().__str__()
         result = result.replace('<', '&lt;')
         result = result.replace('>', '&gt;')
