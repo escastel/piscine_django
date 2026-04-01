@@ -9,7 +9,7 @@ def make_dir():
         f.write('This is the new file...')
 
     with open(dir / file, 'r') as f:
-        print("Contenido del fichero:\n", f.read())
+        print("File content:\n", f.read())
 
 if __name__ == "__main__":
     make_dir()
